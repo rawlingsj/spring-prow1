@@ -32,7 +32,7 @@ pipeline {
              sh "pwd"
              //input 'ok'
 
-             sh "jx preview --app $APP_NAME --dir ../.."
+             sh "jx preview --app $APP_NAME --dir ../.. --source-url=https://github.com/rawlingsj/spring-prow1.git"
            }
           }
         // }

@@ -28,6 +28,9 @@ pipeline {
           dir ('./charts/preview') {
           //  container('maven') {
              sh "make preview"
+             sh "env"
+             input 'ok'
+
              sh "jx preview --app $APP_NAME --dir ../.."
            }
           }

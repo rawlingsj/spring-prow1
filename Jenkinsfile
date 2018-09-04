@@ -29,7 +29,7 @@ pipeline {
           //  container('maven') {
              sh "make preview"
              sh "env | sort"
-             input 'ok'
+             //input 'ok'
 
              sh "jx preview --app $APP_NAME --dir ../.."
            }

@@ -30,7 +30,7 @@ pipeline {
              sh "make preview"
              sh "env | sort"
              sh "pwd"
-             //input 'ok'
+             input 'ok'
 
              sh "jx preview --app $APP_NAME --dir ../.. -b"
            }

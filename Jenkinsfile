@@ -30,9 +30,9 @@ pipeline {
              sh "make preview"
              sh "env | sort"
              sh "pwd"
-             input 'ok'
+             //input 'ok'
 
-             sh "jx preview --app $APP_NAME --dir ../.. --source-url=https://github.com/rawlingsj/spring-prow1.git"
+             sh "jx preview --app $APP_NAME --dir ../.. -b"
            }
           }
         // }

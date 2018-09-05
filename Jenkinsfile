@@ -3,7 +3,7 @@ pipeline {
     environment {
       ORG               = 'rawlingsj'
       APP_NAME          = 'spring-prow1'
-      //CHARTMUSEUM_CREDS = credentials('jenkins-x-chartmuseum')
+      CHARTMUSEUM_CREDS = credentials('jenkins-x-chartmuseum')
     }
     stages {
       stage('CI Build and push snapshot') {
@@ -30,7 +30,7 @@ pipeline {
              sh "make preview"
              sh "env | sort"
              sh "pwd"
-             //input 'ok'
+             input 'ok'
 
              sh "jx preview --app $APP_NAME --dir ../.. --source-url=https://github.com/rawlingsj/spring-prow1.git"
            }
